@@ -1,0 +1,11 @@
+<div class="container mt-4">
+    <div class="float-left col-md-3 mt-4 ">
+        <div class="card card-body " *ngFor='let car of carsArray'>
+            <img src="{{car.img}}" class=" card-img-top" (click)='sendCarDetails(car)'>
+            <h4 class="card-title">{{car.brand}}</h4>
+            <button  class="btn btn-outline-warning" (click)='sendCarDetails(car)'> Show Details </button>
+          </div> 
+    </div>  
+  <app-carchild [detailsFromCar]='carData'></app-carchild>  
+  </div>
+    
